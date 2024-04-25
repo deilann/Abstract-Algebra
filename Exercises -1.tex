@@ -1,0 +1,115 @@
+\title{\textsc{Exercises 0}}
+\date{}
+\author{}
+\documentclass{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{amsthm, thmtools}
+\usepackage{fullpage, changepage, tabto}
+\usepackage{enumerate, enumitem}
+\usepackage{mathtools}
+\usepackage[colorlinks=true, linkcolor=BlueGreen, citecolor=BlueGreen, urlcolor=BlueGreen]{hyperref}
+\usepackage{tocbibind}
+
+
+% set tab distances
+\NumTabs{16}
+
+%%% theorem environments for styling
+% notation
+\declaretheoremstyle[
+    notefont={\normalfont},
+    spaceabove={0.5em},
+    spacebelow={0.5em},
+    notebraces={}{},
+    headformat={\NOTE},
+    headpunct={},
+    postheadhook={\hspace{0em}\tabto{4em}},
+    ]{notation}
+\declaretheorem[style=notation]{notation}
+
+% definition
+\declaretheoremstyle[
+    headfont={\itshape},
+    notefont={\normalfont\bfseries},
+    spaceabove={1em},
+    notebraces={}{},
+    headformat={def \NOTE \newline},
+    headpunct={ },
+    postheadhook={\hspace{0em}\vspace{0.25em}\tab},
+    ]{definition}
+\declaretheorem[style=definition,name=Definition,
+refname={definition,definitions}]{definition}
+
+% note
+\declaretheoremstyle[
+    headfont={\bfseries},
+    shaded={margin={1.5em}, textwidth={20em}},
+    headformat={note: \newline},
+    headpunct={ },
+    ]{note}
+\declaretheorem[style=note]{note}
+
+% exercises
+\declaretheoremstyle[
+    spaceabove=6pt6pt, 
+    spacebelow=6pt6pt,
+    headfont=\normalfont\bfseries,
+    notefont=\mdseries\bfseries, 
+    notebraces={(}{)},
+    bodyfont=\normalfont,
+    postheadspace=1em,
+]{exercises}
+\declaretheorem[style=exercises]{exercise}
+
+% instructions
+\declaretheoremstyle[
+    shaded={margin={1.5em}},
+    headformat={},
+    headpunct={ },
+    name={instructions}
+    ]{instructions}
+\declaretheorem[style=instructions]{instructions}
+
+
+
+% prettier empty set
+\newcommand{\nullset}{\varnothing}
+
+% logic spacing
+\newcommand{\spaced}[1]{\, #1 \,}
+\newcommand{\scomp}{\spaced{\backslash}}
+\newcommand{\sland}{\spaced{\land}}
+\newcommand{\slor}{\spaced{\lor}}
+\newcommand{\simplies}{\spaced{\Rightarrow}}
+\newcommand{\slexists}{\, \exists}
+
+% set macros
+\newcommand{\buildset}[2]{\{\spaced{#1} \mid \spaced{#2} \}}
+\newcommand{\finiteset}[3]{\{ \spaced{#1,} \spaced{#2,} \spaced{#3,} \spaced{\dots} \}}
+
+\begin{document}
+    \maketitle
+    \listoftheorems[title={},
+    swapnumber,
+    ignore={instructions}]
+    
+
+\begin{instructions}beep
+\end{instructions}
+\begin{exercise}
+
+beep
+\begin{proof}
+beeping
+\end{proof}
+
+
+
+
+
+    \end{exercise}
+
+
+
+\end{document}
